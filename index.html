@@ -1,0 +1,120 @@
+<!DOCTYPE 
+html
+>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Daniela Pérez</title>
+    <link rel="icon" href="Recursos/img/escucapu.png" type="image/png">
+    <style>
+        /* 1. ESTILOS BASE */
+        html, body{
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        /* 2. HEADER Y TÍTULO CON NEÓN */
+        header{
+            padding: 20px;
+            background-color: rgb(161, 24, 163);
+            color: rgb(254, 255, 255);
+        }
+        header h1{
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 
+                0 0 5px white,
+                0 0 10px rgb(244, 220, 246),
+                0 0 20px rgb(240, 182, 253),
+                0 0 40px rgb(220, 81, 244);
+        }
+
+        /* 3. CONTENIDO PRINCIPAL - AQUÍ ESTÁ EL CAMBIO */
+        main{
+            flex: 1;
+            padding: 20px;
+            /* Cambiamos 1200px por 100% para que se expanda en toda la pantalla */
+            max-width: 1200px; 
+            margin: 0 auto;
+            background-color: rgb(250, 243, 235);
+        }
+
+        /* 4. TARJETAS ELEGANTES (.semana) */
+        .semana {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            /* Si quieres que las tarjetas también sean más anchas, 
+               puedes subir este número a 1100px o 95% */
+            width: 1200px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-left: 8px solid rgb(161, 24, 163);
+            text-align: left;
+            transition: transform 0.2s;
+        }
+        .semana:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        /* 5. FOOTER Y ZOOM DE IMAGEN */
+        footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            border-top: 1px solid rgb(3, 2, 3);
+            background-color: rgb(225, 159, 248);
+        }
+        footer img {
+            transition: transform 0.3s ease;
+        }
+        footer img:hover {
+            transform: scale(1.2);
+        }
+
+        /* 6. DISEÑO RESPONSIVO (MÓVILES) */
+        @media(max-width:600px){
+            footer{
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bitácora Segunda y tercera Unidad</h1>
+    </header>
+
+    <main>
+        <h4>Contenido de la página WEB</h4>
+
+        <div class="semana">
+            <h3>Primera semana</h3>
+            <p>Acompañamiento de la primera semana:</p>
+            <embed src="Recursos/Introducción Arduino dpg.pdf" type="application/pdf" width="1000px" height="500px" />
+        </div>
+
+        <div class="semana">
+            <h3>Segunda semana</h3>
+            <p>Diseño avanzado con CSS y efectos interactivos.</p>
+        </div>
+    </main>
+
+    <footer>
+        <span>@danip13</span>
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="50" width="200">
+    </footer>
+
